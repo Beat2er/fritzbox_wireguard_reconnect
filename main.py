@@ -10,6 +10,9 @@ from webdriver_manager.chrome import ChromeDriverManager
 import requests
 import hashlib
 from xml.etree import ElementTree
+import urllib3
+
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 # get env variables
 g_ip = os.environ.get("ENV_IP")
