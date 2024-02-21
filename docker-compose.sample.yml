@@ -1,0 +1,12 @@
+version: "3.8"
+services:
+  fritzbox_reconnect_vpn:
+    build: .
+    environment:
+      - ENV_IP=192.168.178.1
+      - ENV_USER=admin
+      - ENV_PASS=admin
+      - ENV_VPN_NAMES=VPN1;VPN2
+      - ENV_LOOP_DELAY=60
+      - ENV_HEADLESS=True
+    restart: unless-stopped
