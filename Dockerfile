@@ -1,7 +1,7 @@
 # basic image that includes main.py and executes it in endless loop, consider flusing the output
 FROM python:3.8-slim
 LABEL maintainer="Beat2er"
-LABEL version="1.0"
+LABEL version="1.1"
 LABEL name="fritzbox_reconnect_vpn"
 
 RUN apt-get update && apt-get install -y wget gnupg2

@@ -109,6 +109,7 @@ def main(log_entries=g_log_entries, loop_time=g_loop_time, connection_names=g_co
 
     connection_sid, _ = get_fritzbox_overview_data(ip, user, passw)
     driver = get_chrome_webdriver(headless)
+    loop_time_instance = loop_time
 
     while True:
         # if all connection_names are listed in log_entries with enable and time in last 5 minutes, wait 30s
